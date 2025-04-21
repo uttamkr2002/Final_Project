@@ -1,0 +1,38 @@
+variables:
+  GO_VERSION: "1.23.5"
+  #GOLANGCI_LINT_VERSION: 'v1.60.1'
+
+image: golang:${GO_VERSION}
+
+stages:
+  - test
+  - build
+
+
+
+test:
+  stage: test
+  script:
+    - go install github.com/jstemmer/go-junit-report@latest
+    - export PATH=$PATH:$(go env GOPATH)/bin
+    - echo "Listing project files:"
+    - find . -type f -name "*.go" | sort
+    - echo "Listing test files:"
+    - find . -type f -name "*_test.go" | sort
+    - echo "Running tests:"
+    - go test -mod=readonly -v ./... 2>&1 | tee test-output.txt
+    - cat test-output.txt | go-junit-report > report.xml
+  artifacts:
+    paths:
+      - test-output.txt
+    reports:
+      junit: report.xml
+
+compile:
+  stage: build
+  script:
+    - mkdir -p build
+    - go build -o build ./...
+  artifacts:
+    paths:
+      - build

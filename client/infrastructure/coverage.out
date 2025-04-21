@@ -1,0 +1,24 @@
+mode: set
+client/infrastructure/db.go:25.50,27.2 1 1
+client/infrastructure/db.go:42.41,43.24 1 1
+client/infrastructure/db.go:43.24,45.3 1 0
+client/infrastructure/db.go:46.2,46.27 1 1
+client/infrastructure/db.go:50.40,51.24 1 0
+client/infrastructure/db.go:51.24,54.3 2 0
+client/infrastructure/db.go:58.83,59.24 1 1
+client/infrastructure/db.go:59.24,62.3 1 0
+client/infrastructure/db.go:64.2,65.26 2 1
+client/infrastructure/db.go:68.25,70.16 2 1
+client/infrastructure/db.go:70.16,73.3 2 0
+client/infrastructure/db.go:74.2,75.12 2 1
+client/infrastructure/db.go:79.72,85.2 4 1
+client/infrastructure/db.go:88.35,103.16 10 1
+client/infrastructure/db.go:103.16,106.3 2 0
+client/infrastructure/db.go:108.2,110.39 2 1
+client/infrastructure/db.go:110.39,114.3 3 0
+client/infrastructure/db.go:116.2,117.22 2 1
+client/infrastructure/insertdata.go:9.79,12.16 2 1
+client/infrastructure/insertdata.go:12.16,14.3 1 1
+client/infrastructure/insertdata.go:16.2,50.16 6 1
+client/infrastructure/insertdata.go:50.16,52.3 1 1
+client/infrastructure/insertdata.go:54.2,55.16 2 1
